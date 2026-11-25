@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env*
+!.env.example
+data/liar/
+.DS_Store
+*.py[cod]
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+backend/data/*.db
+backend/models/*.joblib
+backend/models/*.json
+backend/models/*.pt
+backend/models/*.safetensors
+backend/models/*.bin
+backend/models/transformer-checkpoints/
+backend/models/liar_distilbert/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+

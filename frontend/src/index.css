@@ -1,0 +1,113 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--ink);
+  background: var(--page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+
+  --page-bg: #f3f7fd;
+  --green: #2865a9;
+  --green-dark: #1e4f88;
+  --chart-secondary: #7797bd;
+  --ink: #172b45;
+  --muted: #62748b;
+  --muted-soft: #8797aa;
+  --line: #dce5f0;
+  --paper: #fff;
+  --surface-alt: #f5f8fd;
+  --surface-hover: #edf4fc;
+  --soft: #eaf2fc;
+  --blue-border: #d8e4f3;
+  --blue-border-strong: #b4cbe7;
+  --body-text: #50647e;
+  --placeholder: #91a0b2;
+  --subtle: #89a0bd;
+  --input-bg: #fff;
+  --danger-bg: #fff5f4;
+  --danger-border: #efcfcd;
+  --danger-text: #873e3a;
+  --warning-bg: #fbf8ef;
+  --warning-border: #d5b36c;
+  --card-glass: rgb(255 255 255 / 84%);
+  --serif: Georgia, 'Times New Roman', serif;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page-bg: #0c1626;
+  --green: #78aef0;
+  --green-dark: #9bc4f6;
+  --chart-secondary: #9bb9df;
+  --ink: #e5eefb;
+  --muted: #a7b7cc;
+  --muted-soft: #8497b1;
+  --line: #273a55;
+  --paper: #132139;
+  --surface-alt: #172741;
+  --surface-hover: #1a2e4a;
+  --soft: #1d3657;
+  --blue-border: #2a4262;
+  --blue-border-strong: #42638c;
+  --body-text: #c1cee0;
+  --placeholder: #7185a0;
+  --subtle: #7189a7;
+  --input-bg: #0f1b2e;
+  --danger-bg: #3a252d;
+  --danger-border: #70404b;
+  --danger-text: #f2b9b6;
+  --warning-bg: #3a3424;
+  --warning-border: #8c7440;
+  --card-glass: rgb(19 33 57 / 88%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(40 101 169 / 40%);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #d5e7fc;
+  color: #173b67;
+}
+
+:root[data-theme='dark'] ::selection {
+  background: #315784;
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}

@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_PROVIDER: sqlite
+      SQLITE_DATABASE_PATH: /app/data/truthlens.db
+      FRONTEND_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+      GOOGLE_FACT_CHECK_API_KEY: ${GOOGLE_FACT_CHECK_API_KEY:-}
+    volumes:
+      - truthlens-data:/app/data
+
+  web:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+
+volumes:
+  truthlens-data:
